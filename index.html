@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pakistan GK Challenge — National Heritage & General Knowledge Quiz</title>
+  <meta name="description" content="Test and elevate your knowledge of Pakistan's history, geography, national symbols, culture, cricket, and constitution through interactive, verified quizzes.">
+  <meta name="theme-color" content="#01411c">
+
+  <!-- Typography: Plus Jakarta Sans & Playfair Display -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       Site Navigation Bar
+       ========================================================================== -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <!-- Brand Logo -->
+      <a href="#home" class="brand-link" id="brand-home-link" aria-label="Pakistan GK Challenge Home">
+        <div class="brand-emblem" aria-hidden="true">
+          <!-- Crescent & Star SVG -->
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1.88 15.34c-2.95 0-5.34-2.39-5.34-5.34s2.39-5.34 5.34-5.34c.88 0 1.7.21 2.42.59-1.89.84-3.21 2.74-3.21 4.75 0 2.01 1.32 3.91 3.21 4.75-.72.38-1.54.59-2.42.59zm3.62-5.34l-1.07.78.41 1.26-1.07-.78-1.07.78.41-1.26-1.07-.78 1.32-.01.41-1.26.41 1.26 1.32.01z"/>
+          </svg>
+        </div>
+        <div class="brand-text-wrap">
+          <span class="brand-title">Pakistan GK Challenge</span>
+          <span class="brand-subtitle">Heritage & Civic Knowledge</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="nav-menu-wrap" aria-label="Main Navigation">
+        <ul class="nav-menu" role="list">
+          <li><a href="#categories" class="nav-link" id="nav-categories-link">Categories</a></li>
+          <li><a href="#daily" class="nav-link" id="nav-daily-link">Daily Challenge</a></li>
+          <li><a href="#how-it-works" class="nav-link" id="nav-how-link">How It Works</a></li>
+          <li><a href="#leaderboard" class="nav-link" id="nav-leaderboard-link">Leaderboard</a></li>
+          <li><a href="#about-developer" class="nav-link" id="nav-about-link">About Me</a></li>
+        </ul>
+      </nav>
+
+      <!-- Action Controls -->
+      <div class="header-actions">
+        <!-- Sound Toggle -->
+        <button type="button" class="btn-icon" id="btn-toggle-sound" aria-label="Toggle Sound Effects" title="Toggle Sound">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" id="sound-icon" aria-hidden="true">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+            <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+          </svg>
+        </button>
+
+        <!-- Theme Toggle (Dark / Light) -->
+        <button type="button" class="btn-icon" id="btn-toggle-theme" aria-label="Toggle Theme" title="Toggle Dark/Light Mode">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" id="theme-icon" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+
+        <!-- Stats / History Button -->
+        <button type="button" class="btn-icon" id="btn-open-stats" aria-label="View My Statistics" title="Performance Statistics">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="18" y1="20" x2="18" y2="10"></line>
+            <line x1="12" y1="20" x2="12" y2="4"></line>
+            <line x1="6" y1="20" x2="6" y2="14"></line>
+          </svg>
+        </button>
+
+        <!-- Start Quiz CTA Button -->
+        <button type="button" class="btn btn-primary btn-sm" id="btn-nav-start-quiz">
+          Start Quiz
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content" role="main">
+
+    <!-- ==========================================================================
+         VIEW 1: HOME PAGE
+         ========================================================================== -->
+    <div id="view-home" class="view-container active">
+      
+      <!-- Hero Section -->
+      <section class="hero-section" aria-labelledby="hero-title">
+        <div class="hero-pattern-bg" aria-hidden="true"></div>
+        <div class="container hero-grid">
+          
+          <div class="hero-content">
+            <div class="hero-badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+              </svg>
+              Verified National Knowledge Repository
+            </div>
+
+            <h1 id="hero-title" class="heading-display hero-headline">
+              How Well Do You Know <span class="highlight">Pakistan?</span>
+            </h1>
+
+            <p class="hero-subhead">
+              From the snow-crowned summits of K2 and the archaeological wonders of Mohenjo-daro to constitutional milestones and world cricket victories—challenge yourself with 130 fact-checked questions.
+            </p>
+
+            <div class="hero-cta-group">
+              <button type="button" class="btn btn-primary btn-lg" id="btn-hero-start">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                </svg>
+                Start Quick Quiz
+              </button>
+
+              <a href="#categories" class="btn btn-secondary btn-lg" id="btn-hero-explore">
+                Explore 10 Categories
+              </a>
+            </div>
+
+            <div class="hero-meta-strip">
+              <div class="meta-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+                <span>100% Fact Checked</span>
+              </div>
+              <div class="meta-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+                <span>Timed & Study Modes</span>
+              </div>
+              <div class="meta-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                </svg>
+                <span>Free & Open Source</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Visual Art Card -->
+          <div class="hero-visual">
+            <div class="hero-card">
+              <div class="hero-card-pattern" aria-hidden="true"></div>
+              
+              <div class="hero-card-header">
+                <div class="national-crest">
+                  <div class="crest-icon-box">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                      <path d="M12 2L1 21h22L12 2zm0 4.2l7.53 13.05H4.47L12 6.2z"/>
+                    </svg>
+                  </div>
+                  <div class="crest-text">
+                    <h4>National Knowledge Index</h4>
+                    <p>Curated Edition 2026</p>
+                  </div>
+                </div>
+                <div class="live-pill">
+                  <span class="live-dot" aria-hidden="true"></span>
+                  Interactive
+                </div>
+              </div>
+
+              <div class="hero-card-stats">
+                <div class="card-stat-box">
+                  <span class="stat-box-val" id="hero-stat-questions">130</span>
+                  <span class="stat-box-label">Verified Questions</span>
+                </div>
+                <div class="card-stat-box">
+                  <span class="stat-box-val">10</span>
+                  <span class="stat-box-label">Curated Categories</span>
+                </div>
+                <div class="card-stat-box">
+                  <span class="stat-box-val" id="hero-stat-attempts">0</span>
+                  <span class="stat-box-label">Quizzes Completed</span>
+                </div>
+                <div class="card-stat-box">
+                  <span class="stat-box-val" id="hero-stat-accuracy">0%</span>
+                  <span class="stat-box-label">Avg. Accuracy</span>
+                </div>
+              </div>
+
+              <div class="hero-card-footer">
+                <p class="hero-quote">
+                  "Faith, Unity, and Discipline." — Quaid-e-Azam
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Dynamic Statistics Strip -->
+      <section class="stats-strip" aria-label="Website Key Statistics">
+        <div class="container stats-grid">
+          <div class="stat-item">
+            <div class="stat-item-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+              </svg>
+            </div>
+            <div class="stat-item-info">
+              <h3>130</h3>
+              <p>Meticulous Questions</p>
+            </div>
+          </div>
+
+          <div class="stat-item">
+            <div class="stat-item-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+              </svg>
+            </div>
+            <div class="stat-item-info">
+              <h3>10</h3>
+              <p>Specialized Categories</p>
+            </div>
+          </div>
+
+          <div class="stat-item">
+            <div class="stat-item-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 14 14"></polyline>
+              </svg>
+            </div>
+            <div class="stat-item-info">
+              <h3>4,500+</h3>
+              <p>Years of Heritage</p>
+            </div>
+          </div>
+
+          <div class="stat-item">
+            <div class="stat-item-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+              </svg>
+            </div>
+            <div class="stat-item-info">
+              <h3 id="stat-strip-attempts">0</h3>
+              <p>Your Quiz Attempts</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Daily Challenge Feature Banner -->
+      <section class="daily-challenge-section" id="daily" aria-labelledby="daily-title">
+        <div class="container">
+          <div class="daily-card">
+            <div class="daily-card-bg-mesh" aria-hidden="true"></div>
+            <div>
+              <div class="daily-tag-wrap">
+                <span class="daily-badge">Daily National Challenge</span>
+                <span class="daily-streak-badge" id="daily-streak-display">🔥 0 Day Streak</span>
+              </div>
+              <h2 id="daily-title" class="daily-title">Today's Curated 10-Question Challenge</h2>
+              <p class="daily-desc">
+                A daily hand-picked set of 10 questions covering one from every category. Everyone gets the exact same questions today—test your daily consistency!
+              </p>
+            </div>
+            <div class="daily-actions">
+              <button type="button" class="btn btn-accent btn-lg" id="btn-start-daily">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                </svg>
+                <span id="daily-btn-text">Take Daily Challenge</span>
+              </button>
+              <span class="daily-status-text" id="daily-status-text">Available for Today</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Category Explorer Section -->
+      <section class="section-padding" id="categories" aria-labelledby="categories-heading">
+        <div class="container">
+          
+          <div class="section-header">
+            <div class="section-header-left">
+              <span class="section-badge">Mastery Domains</span>
+              <h2 id="categories-heading" class="heading-section">Explore Quiz Categories</h2>
+              <p class="section-desc">
+                Dive deep into specific domains or challenge yourself with a mixed general knowledge test across all categories.
+              </p>
+            </div>
+            <button type="button" class="btn btn-primary" id="btn-play-mixed-gk">
+              Play Mixed General Knowledge
+            </button>
+          </div>
+
+          <!-- Dynamic Categories Grid (populated via JS) -->
+          <div class="categories-grid" id="categories-grid-container">
+            <!-- Rendered by app.js -->
+          </div>
+
+        </div>
+      </section>
+
+      <!-- How It Works Section -->
+      <section class="section-padding how-it-works-section" id="how-it-works" aria-labelledby="how-heading">
+        <div class="container">
+          
+          <div class="section-header">
+            <div class="section-header-left">
+              <span class="section-badge">Engaging & Educational</span>
+              <h2 id="how-heading" class="heading-section">How The Challenge Works</h2>
+              <p class="section-desc">
+                A friction-free learning system designed for students, competitive exam aspirants (CSS/PMS), and general knowledge enthusiasts.
+              </p>
+            </div>
+          </div>
+
+          <div class="steps-grid">
+            <div class="step-card">
+              <div class="step-number" aria-hidden="true">01</div>
+              <h3>Configure Your Session</h3>
+              <p>Select any single category or mixed GK. Choose your difficulty (Easy, Medium, Hard) and question volume (10, 20, or 30).</p>
+            </div>
+
+            <div class="step-card">
+              <div class="step-number" aria-hidden="true">02</div>
+              <h3>Timed or Zen Experience</h3>
+              <p>Race against the 30-second clock or switch to Zen Mode for relaxed study. Immediate explanations expand your historical insights.</p>
+            </div>
+
+            <div class="step-card">
+              <div class="step-number" aria-hidden="true">03</div>
+              <h3>Track Mastery & Missed Retry</h3>
+              <p>Analyze performance metrics, retry only the questions you missed for total mastery, and climb your local browser leaderboard.</p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Leaderboard & Recent History Preview -->
+      <section class="section-padding" id="leaderboard" aria-labelledby="leaderboard-heading">
+        <div class="container">
+          
+          <div class="leaderboard-preview-grid">
+            <!-- Local Leaderboard Panel -->
+            <div class="panel-card">
+              <div class="panel-card-header">
+                <div class="panel-title-wrap">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gold" aria-hidden="true">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                  </svg>
+                  <h3 id="leaderboard-heading">Local Leaderboard</h3>
+                </div>
+                <span class="panel-badge">Stored on this browser</span>
+              </div>
+
+              <div class="table-responsive">
+                <table class="data-table" aria-label="Top Local Quiz Scores">
+                  <thead>
+                    <tr>
+                      <th scope="col">Rank</th>
+                      <th scope="col">Category</th>
+                      <th scope="col">Score</th>
+                      <th scope="col">Accuracy</th>
+                      <th scope="col">Date</th>
+                    </tr>
+                  </thead>
+                  <tbody id="leaderboard-table-body">
+                    <!-- Populated dynamically via JS -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- Recent Attempts Preview Panel -->
+            <div class="panel-card">
+              <div class="panel-card-header">
+                <div class="panel-title-wrap">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                  <h3>Recent Attempts</h3>
+                </div>
+                <button type="button" class="btn btn-secondary btn-sm" id="btn-view-all-stats">
+                  View Full Stats
+                </button>
+              </div>
+
+              <div id="recent-history-container">
+                <!-- Populated dynamically via JS -->
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- A Little About Me Section -->
+      <section class="about-developer-section" id="about-developer" aria-labelledby="about-dev-heading">
+        <div class="container">
+          <div class="developer-card">
+            
+            <div class="dev-photo-container">
+              <div class="dev-photo-frame">
+                <img 
+                  src="assets/images/zabeeh.jpeg" 
+                  alt="Profile photograph of Zabeeh Ullah, creative web developer" 
+                  class="dev-photo"
+                  width="170"
+                  height="170"
+                  loading="lazy"
+                >
+              </div>
+              <div class="dev-status-badge" title="Active Developer &amp; Creator" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                </svg>
+              </div>
+            </div>
+
+            <div class="dev-info">
+              <span class="dev-meta-tag">Developer &amp; Creator</span>
+              <h2 id="about-dev-heading" class="dev-name">Zabeeh Ullah</h2>
+              <div class="dev-role">Creative Front-End Developer &amp; UI/UX Craftsman</div>
+              <p class="dev-bio">
+                A passionate web developer based in Pakistan, dedicated to building responsive, accessible, and art-directed digital experiences. Built <strong>Pakistan GK Challenge</strong> from the ground up using pure vanilla HTML, CSS, and modern JavaScript to celebrate our nation's rich heritage, history, and civic accomplishments through clean, high-performance web engineering.
+              </p>
+              
+              <div class="dev-actions-row">
+                <!-- LinkedIn -->
+                <a href="https://www.linkedin.com/in/zabeeh-ullah-1b6094382/" target="_blank" rel="noopener noreferrer" class="dev-link-chip primary-chip" title="Connect on LinkedIn">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                  </svg>
+                  <span>LinkedIn</span>
+                </a>
+
+                <!-- GitHub -->
+                <a href="https://github.com/Zabeeh-Ullah-Dev" target="_blank" rel="noopener noreferrer" class="dev-link-chip" title="View GitHub Repositories">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                  </svg>
+                  <span>GitHub</span>
+                </a>
+
+                <!-- WhatsApp -->
+                <a href="https://wa.me/923070509981" target="_blank" rel="noopener noreferrer" class="dev-link-chip" title="Chat on WhatsApp">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.669-.699c.969.587 1.96.98 2.791.98 3.182 0 5.768-2.587 5.768-5.766.001-3.182-2.585-5.766-5.768-5.766zm9.969 5.766c0 5.514-4.486 10-10 10-1.758 0-3.411-.458-4.856-1.259l-7.144 1.87 1.905-6.969c-.896-1.492-1.405-3.237-1.405-5.142 0-5.514 4.486-10 10-10s10 4.486 10 10z"/>
+                  </svg>
+                  <span>WhatsApp</span>
+                </a>
+
+                <!-- Portfolio -->
+                <a href="https://zabeeh-ullah.netlify.app/" target="_blank" rel="noopener noreferrer" class="dev-link-chip" title="Visit Personal Portfolio">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="2" y1="12" x2="22" y2="12"></line>
+                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                  </svg>
+                  <span>Portfolio</span>
+                </a>
+
+                <!-- Resume Request -->
+                <a href="mailto:zabeehullah2005@gmail.com?subject=CV%20Request%20-%20Zabeeh%20Ullah" class="dev-link-chip" title="Request Full Resume / CV">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                    <polyline points="14 2 14 8 20 8"></polyline>
+                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                    <polyline points="10 9 9 9 8 9"></polyline>
+                  </svg>
+                  <span>Request CV</span>
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- ==========================================================================
+         VIEW 2: QUIZ CONFIGURATION SCREEN
+         ========================================================================== -->
+    <div id="view-config" class="view-container">
+      <div class="container">
+        
+        <div class="config-wrapper">
+          <div class="config-header">
+            <h2>Configure Your Quiz</h2>
+            <p>Customize category, difficulty, question volume, and timer parameters.</p>
+          </div>
+
+          <form id="quiz-config-form">
+            <!-- Category Selection -->
+            <div class="config-group">
+              <label for="config-category-select" class="config-label">Subject Category</label>
+              <select id="config-category-select" class="category-dropdown-select">
+                <option value="all">🌟 All Categories (Mixed General Knowledge)</option>
+                <!-- Populated by JS -->
+              </select>
+            </div>
+
+            <!-- Difficulty Selection -->
+            <div class="config-group">
+              <span class="config-label">Difficulty Level</span>
+              <div class="config-options-grid" role="radiogroup" aria-label="Difficulty Level">
+                <button type="button" class="config-btn-select selected" data-value="all" role="radio" aria-checked="true">
+                  All Levels
+                </button>
+                <button type="button" class="config-btn-select" data-value="easy" role="radio" aria-checked="false">
+                  Easy
+                </button>
+                <button type="button" class="config-btn-select" data-value="medium" role="radio" aria-checked="false">
+                  Medium
+                </button>
+                <button type="button" class="config-btn-select" data-value="hard" role="radio" aria-checked="false">
+                  Challenging
+                </button>
+              </div>
+              <input type="hidden" id="config-difficulty" value="all">
+            </div>
+
+            <!-- Question Count -->
+            <div class="config-group">
+              <span class="config-label">Number of Questions</span>
+              <div class="config-options-grid" role="radiogroup" aria-label="Number of Questions">
+                <button type="button" class="config-btn-select selected" data-count="10" role="radio" aria-checked="true">
+                  10 Questions
+                </button>
+                <button type="button" class="config-btn-select" data-count="20" role="radio" aria-checked="false">
+                  20 Questions
+                </button>
+                <button type="button" class="config-btn-select" data-count="30" role="radio" aria-checked="false">
+                  30 Questions
+                </button>
+              </div>
+              <input type="hidden" id="config-count" value="10">
+            </div>
+
+            <!-- Timer Toggle Switch -->
+            <div class="toggle-switch-wrap">
+              <div class="toggle-info">
+                <h4>Timed Challenge (30s per question)</h4>
+                <p>Add the pressure of a countdown with visual warnings</p>
+              </div>
+              <label class="switch">
+                <input type="checkbox" id="config-timer-toggle" checked>
+                <span class="slider"></span>
+              </label>
+            </div>
+
+            <!-- Instant Study Mode Toggle Switch -->
+            <div class="toggle-switch-wrap">
+              <div class="toggle-info">
+                <h4>Instant Feedback (Study Mode)</h4>
+                <p>Reveal correct answers & historical explanations immediately on click</p>
+              </div>
+              <label class="switch">
+                <input type="checkbox" id="config-instant-toggle">
+                <span class="slider"></span>
+              </label>
+            </div>
+
+            <!-- Actions -->
+            <div class="config-actions">
+              <button type="button" class="btn btn-secondary" id="btn-config-cancel">
+                Cancel
+              </button>
+              <button type="submit" class="btn btn-primary btn-lg" id="btn-config-launch">
+                Launch Quiz
+              </button>
+            </div>
+          </form>
+
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ==========================================================================
+         VIEW 3: INTERACTIVE QUIZ SCREEN
+         ========================================================================== -->
+    <div id="view-quiz" class="view-container">
+      <div class="container quiz-wrapper">
+        
+        <!-- Top HUD Bar -->
+        <div class="quiz-hud">
+          <div class="hud-left">
+            <button type="button" class="btn btn-secondary btn-sm" id="btn-quiz-exit" title="Exit Quiz">
+              Exit
+            </button>
+            <span class="quiz-meta-tag" id="quiz-hud-category">History</span>
+            <span class="quiz-meta-tag" id="quiz-hud-difficulty">Medium</span>
+          </div>
+
+          <div class="hud-center">
+            <span class="question-counter-text" id="quiz-counter-text">Question 1 of 10</span>
+            <div class="quiz-progress-bar-bg" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
+              <div class="quiz-progress-bar-fill" id="quiz-progress-fill" style="width: 10%;"></div>
+            </div>
+          </div>
+
+          <div class="hud-right">
+            <!-- Timer Badge -->
+            <div class="timer-badge" id="quiz-timer-badge" aria-label="Timer" aria-live="polite">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+              <span id="quiz-timer-value">30s</span>
+            </div>
+
+            <!-- Flag Question Button -->
+            <button type="button" class="btn-flag" id="btn-quiz-flag" aria-label="Flag question for review" title="Flag for Review">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path>
+                <line x1="4" y1="22" x2="4" y2="15"></line>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Main Question Card -->
+        <div class="question-card">
+          <h2 class="question-text" id="quiz-question-text">
+            Loading question...
+          </h2>
+
+          <div class="options-grid" id="quiz-options-container" role="radiogroup" aria-label="Answer Options">
+            <!-- 4 Options rendered by JS -->
+          </div>
+
+          <!-- Explanation Box (revealed in Study Mode) -->
+          <div class="explanation-box" id="quiz-explanation-box">
+            <div class="explanation-title">Historical Insight</div>
+            <p id="quiz-explanation-text"></p>
+          </div>
+        </div>
+
+        <!-- Quiz Navigation Controls Bar -->
+        <div class="quiz-controls-bar">
+          <button type="button" class="btn btn-secondary" id="btn-quiz-prev">
+            &larr; Previous
+          </button>
+
+          <button type="button" class="btn btn-secondary" id="btn-quiz-skip">
+            Skip Question
+          </button>
+
+          <button type="button" class="btn btn-primary" id="btn-quiz-next">
+            Next &rarr;
+          </button>
+
+          <button type="button" class="btn btn-accent" id="btn-quiz-submit">
+            Submit Quiz
+          </button>
+        </div>
+
+        <!-- Collapsible Question Matrix Drawer -->
+        <div class="matrix-container">
+          <div class="matrix-header">
+            <span class="matrix-title">Question Navigator</span>
+            <div class="matrix-legend">
+              <div class="legend-item"><span class="legend-dot" style="background: var(--pk-green-base);"></span> Answered</div>
+              <div class="legend-item"><span class="legend-dot" style="background: var(--border-medium);"></span> Unanswered</div>
+              <div class="legend-item"><span class="legend-dot" style="background: var(--accent-gold);"></span> Flagged</div>
+            </div>
+          </div>
+          <div class="matrix-grid" id="quiz-matrix-grid">
+            <!-- Pills rendered dynamically via JS -->
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ==========================================================================
+         VIEW 4: RESULTS & REVIEW SCREEN
+         ========================================================================== -->
+    <div id="view-results" class="view-container">
+      <div class="container results-wrapper">
+        
+        <!-- Summary Performance Card -->
+        <div class="results-summary-card">
+          <div class="results-crest-badge" id="results-badge-rank">Heritage Scholar</div>
+          <h2 class="results-rank-title" id="results-title-heading">Exceptional Mastery!</h2>
+          <p class="results-eval-message" id="results-eval-message">
+            Your performance reflects a rich understanding of Pakistan's history and national heritage.
+          </p>
+
+          <!-- Score Metrics Grid -->
+          <div class="score-gauges-grid">
+            <div class="score-metric-box">
+              <span class="metric-val" id="res-score-ratio">9 / 10</span>
+              <span class="metric-label">Final Score</span>
+            </div>
+            <div class="score-metric-box">
+              <span class="metric-val" id="res-accuracy-val">90%</span>
+              <span class="metric-label">Accuracy</span>
+            </div>
+            <div class="score-metric-box">
+              <span class="metric-val" id="res-time-val">2m 14s</span>
+              <span class="metric-label">Time Spent</span>
+            </div>
+            <div class="score-metric-box">
+              <span class="metric-val" id="res-missed-val">1</span>
+              <span class="metric-label">Missed</span>
+            </div>
+          </div>
+
+          <!-- Results Actions Wrap -->
+          <div class="results-actions-wrap">
+            <button type="button" class="btn btn-primary" id="btn-results-play-again">
+              Play Again
+            </button>
+            <button type="button" class="btn btn-secondary" id="btn-results-retry-missed">
+              Retry Missed (1)
+            </button>
+            <button type="button" class="btn btn-secondary" id="btn-results-share">
+              Share Score
+            </button>
+            <button type="button" class="btn btn-secondary" id="btn-results-home">
+              Return to Home
+            </button>
+          </div>
+        </div>
+
+        <!-- Detailed Review Section -->
+        <div class="review-section">
+          <div class="review-header">
+            <h3>Detailed Answer Review</h3>
+            <div class="review-filter-tabs">
+              <button type="button" class="btn-filter-tab active" data-filter="all">All</button>
+              <button type="button" class="btn-filter-tab" data-filter="correct">Correct</button>
+              <button type="button" class="btn-filter-tab" data-filter="missed">Missed</button>
+              <button type="button" class="btn-filter-tab" data-filter="flagged">Flagged</button>
+            </div>
+          </div>
+
+          <div class="review-cards-list" id="review-cards-container">
+            <!-- Populated dynamically via JS -->
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ==========================================================================
+       Modals / Accessible Dialogs (<dialog>)
+       ========================================================================== -->
+
+  <!-- 1. Exit Confirmation Modal -->
+  <dialog id="dialog-exit" class="custom-dialog" aria-labelledby="dialog-exit-title">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 id="dialog-exit-title">Exit Active Quiz?</h3>
+      </div>
+      <div class="modal-body">
+        Are you sure you want to exit? Your current progress in this quiz session will not be submitted or counted in your best score.
+      </div>
+      <div class="modal-actions">
+        <button type="button" class="btn btn-secondary" id="btn-cancel-exit">Resume Quiz</button>
+        <button type="button" class="btn btn-outline-danger" id="btn-confirm-exit">Exit to Home</button>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- 2. Submit Confirmation Modal (Warn if unanswered) -->
+  <dialog id="dialog-submit" class="custom-dialog" aria-labelledby="dialog-submit-title">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 id="dialog-submit-title">Submit Quiz?</h3>
+      </div>
+      <div class="modal-body" id="dialog-submit-body">
+        You have answered all questions. Ready to calculate your score?
+      </div>
+      <div class="modal-actions">
+        <button type="button" class="btn btn-secondary" id="btn-cancel-submit">Review Questions</button>
+        <button type="button" class="btn btn-primary" id="btn-confirm-submit">Yes, Submit</button>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- 3. Statistics & Mastery Modal -->
+  <dialog id="dialog-stats" class="custom-dialog" aria-labelledby="dialog-stats-title">
+    <div class="modal-content" style="max-width: 640px;">
+      <div class="modal-header">
+        <h3 id="dialog-stats-title">Your Performance & History</h3>
+      </div>
+      <div class="modal-body">
+        <div id="stats-modal-content">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+      <div class="modal-actions">
+        <button type="button" class="btn btn-outline-danger btn-sm" id="btn-clear-stats-data">Reset Local History</button>
+        <button type="button" class="btn btn-primary" id="btn-close-stats-dialog">Close</button>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Toast Notification Pill -->
+  <div id="toast-notice" class="toast-notice" role="alert" aria-live="assertive">
+    Score copied to clipboard!
+  </div>
+
+  <!-- ==========================================================================
+       Site Footer
+       ========================================================================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="brand-link">
+            <div class="brand-emblem" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1.88 15.34c-2.95 0-5.34-2.39-5.34-5.34s2.39-5.34 5.34-5.34c.88 0 1.7.21 2.42.59-1.89.84-3.21 2.74-3.21 4.75 0 2.01 1.32 3.91 3.21 4.75-.72.38-1.54.59-2.42.59zm3.62-5.34l-1.07.78.41 1.26-1.07-.78-1.07.78.41-1.26-1.07-.78 1.32-.01.41-1.26.41 1.26 1.32.01z"/>
+              </svg>
+            </div>
+            <div class="brand-text-wrap">
+              <span class="brand-title">Pakistan GK Challenge</span>
+              <span class="brand-subtitle">Heritage & Civic Knowledge</span>
+            </div>
+          </div>
+          <p>
+            An art-directed, verified educational project celebrating Pakistan's history, culture, geography, and national achievements.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Core Domains</h4>
+          <ul class="footer-links">
+            <li><a href="#categories" class="footer-category-link" data-cat="history">Pakistan History</a></li>
+            <li><a href="#categories" class="footer-category-link" data-cat="geography">Geography & Peaks</a></li>
+            <li><a href="#categories" class="footer-category-link" data-cat="constitution">Constitution & Civics</a></li>
+            <li><a href="#categories" class="footer-category-link" data-cat="sports">Sports & Cricket</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Features</h4>
+          <ul class="footer-links">
+            <li><a href="#daily">Daily Challenge</a></li>
+            <li><a href="#leaderboard">Local Leaderboard</a></li>
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#about-developer">About Developer</a></li>
+            <li><a href="#" id="footer-link-stats">My Statistics</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Project Details</h4>
+          <ul class="footer-links">
+            <li><span>Pure Vanilla HTML/CSS/JS</span></li>
+            <li><span>Zero External Libraries</span></li>
+            <li><span>130 Fact-Checked Items</span></li>
+            <li><span>WCAG Accessible</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Pakistan GK Challenge. Created by Zabeeh Ullah. Built with pride & craftsmanship for national learning.</p>
+        <p>Curated for academic, competitive, and public general knowledge.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script Modules -->
+  <script src="js/questions.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/audio.js"></script>
+  <script src="js/quiz.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
