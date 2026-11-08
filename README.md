@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # 🇵🇰 Pakistan GK Challenge — Professional General Knowledge Quiz
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-01411c.svg)](LICENSE)
@@ -177,8 +176,3 @@ Created and engineered with pride by **Zabeeh Ullah**, creative front-end develo
 
 This project is open-source and available under the [MIT License](LICENSE).
 Built with craftsmanship to celebrate Pakistan's history and heritage.
-
-=======
-# Pakistan-GK-Challenge
-Pakistan GK Challenge is a premium, responsive general knowledge web application dedicated to testing and elevating knowledge of Pakistan’s rich history, geography, national symbols, culture, cricket, science, and constitution. Built with vanilla HTML5, CSS3, and JavaScript—designed with professional human UI/UX art direction.
->>>>>>> a96f626918b8c5163cb55eb08907a73ada2919e3
